@@ -1,0 +1,32 @@
+import Link from 'next/link'
+import React from 'react'
+import Button from '../components/atoms/Button'
+
+function signIn() {
+    return (
+        <div className="flex w-full justify-center p-3">
+            <div className="flex flex-col items-center w-[350px] justify-center p-1">
+                <img src="/logo-black.png" alt="" className="w-24 " />
+                <div className="flex flex-col mt-5  px-7 py-5 border border-black/20 rounded-lg">
+                    <h1 className="text-3xl  mb-5">Sign-in</h1>
+                    <div className="mb-3 w-full">
+                        <label htmlFor="email" className="text-xs font-bold mb-1">Email or mobile phone number</label>
+                        <input id="email" type="text" className="w-full focus:outline-none border border-black/40 focus:ring-2 focus:ring-orange-200 focus:border-orange-500 rounded p-1.5 text-sm" />
+                    </div>
+                    <Button title="continue" />
+                    <span className="text-[10px] mt-5">By continuing, you agree to Amazon's Conditions of Use and Privacy Notice.</span>
+                </div>
+                <div className="flex flex-col mt-5  w-full items-center ">
+                    <span className="text-xs   text-black/50">New to Amazon?</span>
+                    <Link href="/signup">
+                        <a className="text-xs mt-2  p-3 py-2 w-full text-center bg-gradient-to-t from-gray-300/50 hover:from-gray-500/30 hover:to-gray-300/60  to-gray-300/50 rounded border border-black/40 capitalize">Create your Amazon account</a>
+
+                    </Link>
+                </div>
+
+            </div>
+        </div>
+    )
+}
+
+export default signIn
